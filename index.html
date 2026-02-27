@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amandeep Singh | Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#0c0f14;
+--card:#121722;
+--accent:#00f0ff;
+--text:#e6edf3;
+--muted:#8b949e;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(12,15,20,0.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+header h1{
+font-size:18px;
+font-weight:700;
+background:linear-gradient(90deg,var(--accent),#9d00ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:var(--text);
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--accent);
+}
+
+section{
+padding:120px 10%;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h2{
+font-size:48px;
+font-weight:800;
+}
+
+.hero span{
+color:var(--accent);
+}
+
+.typing{
+color:var(--accent);
+font-weight:600;
+border-right:2px solid var(--accent);
+white-space:nowrap;
+overflow:hidden;
+}
+
+.hero p{
+max-width:550px;
+margin-top:20px;
+color:var(--muted);
+}
+
+.btn{
+margin-top:30px;
+padding:12px 24px;
+background:linear-gradient(90deg,var(--accent),#9d00ff);
+border:none;
+border-radius:6px;
+color:#000;
+font-weight:700;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 0 15px rgba(0,240,255,0.4);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(0,240,255,0.7);
+}
+
+.section-title{
+font-size:30px;
+margin-bottom:40px;
+position:relative;
+}
+
+.section-title::after{
+content:"";
+width:70px;
+height:3px;
+background:var(--accent);
+position:absolute;
+left:0;
+bottom:-10px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.skill{
+background:var(--card);
+padding:12px 18px;
+border-radius:6px;
+font-size:14px;
+transition:0.3s;
+border:1px solid transparent;
+}
+
+.skill:hover{
+border:1px solid var(--accent);
+transform:translateY(-4px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+padding:25px;
+border-radius:10px;
+transition:0.4s;
+border:1px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border:1px solid var(--accent);
+box-shadow:0 0 20px rgba(0,240,255,0.2);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:var(--muted);
+font-size:14px;
+margin-bottom:10px;
+}
+
+.card a{
+color:var(--accent);
+text-decoration:none;
+font-size:14px;
+}
+
+.contact-links a{
+display:block;
+margin-bottom:10px;
+color:var(--accent);
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:var(--muted);
+font-size:14px;
+}
+
+/* Scroll Animation */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+.hero h2{
+font-size:36px;
+}
+header{
+padding:15px 5%;
+}
+section{
+padding:120px 5%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Amandeep Singh</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero hidden">
+<h2>Hi, I'm <span>Amandeep</span></h2>
+<h3 class="typing" id="typing"></h3>
+<p>I build modern, performance-driven digital experiences blending technology, design, and finance-focused thinking.</p>
+<a href="#contact" class="btn">Let's Connect</a>
+</section>
+
+<section id="about" class="hidden">
+<h2 class="section-title">About Me</h2>
+<p>I’m a developer passionate about clean design, smooth interactions, and scalable ideas.  
+Currently exploring tech + finance to build impactful digital businesses.</p>
+</section>
+
+<section id="skills" class="hidden">
+<h2 class="section-title">Skills</h2>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">UI/UX</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">Basic Finance</div>
+</div>
+</section>
+
+<section id="projects" class="hidden">
+<h2 class="section-title">Projects</h2>
+<div class="projects">
+
+<div class="card">
+<h3>AI Landing Page</h3>
+<p>High-conversion modern landing page with smooth animation effects.</p>
+<p><strong>Tech:</strong> HTML, CSS, JS</p>
+<a href="#">View Project →</a>
+</div>
+
+<div class="card">
+<h3>Finance Tracker</h3>
+<p>Expense & income tracking web app with interactive UI.</p>
+<p><strong>Tech:</strong> JavaScript, Local Storage</p>
+<a href="#">View Project →</a>
+</div>
+
+<div class="card">
+<h3>Personal Portfolio</h3>
+<p>Fully responsive portfolio with animations and premium dark theme.</p>
+<p><strong>Tech:</strong> HTML, CSS</p>
+<a href="#">View Project →</a>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="hidden">
+<h2 class="section-title">Contact</h2>
+<div class="contact-links">
+<a href="mailto:your@email.com">Email: your@email.com</a>
+<a href="#">GitHub</a>
+<a href="#">LinkedIn</a>
+</div>
+</section>
+
+<footer>
+© 2026 Amandeep Singh — Built with Precision.
+</footer>
+
+<script>
+// Typing Animation
+const text = ["Web Developer", "Future Finance Enthusiast", "Digital Builder"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+if(count === text.length){
+count = 0;
+}
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
+setTimeout(type, 1000);
+} else{
+setTimeout(type, 80);
+}
+})();
+
+// Scroll Reveal
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
